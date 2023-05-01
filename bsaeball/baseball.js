@@ -58,7 +58,7 @@ $form.addEventListener("submit", (event) => {
   let strike = 0;
   let ball = 0;
 
-  for (let i = 0; i < answer.length.length; i++) {
+  for (let i = 0; i < answer.length; i++) {
     const index = value.indexOf(answer[i]);
     if (index > -1) {
       if (index === i) {
@@ -72,9 +72,4 @@ $form.addEventListener("submit", (event) => {
     `${value}: ${strike} Strike ${ball} Ball`,
     document.createElement("br")
   );
-  if (count > 10) {
-    logs.appendChild(document.createTextNode(`Game Over: ${answer.join("")}`));
-  } else {
-    count += 1;
-  }
 });
